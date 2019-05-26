@@ -81,15 +81,19 @@ function formatDate(date){
  * Display all entries
  */
 function displayEntries() {
-    var entriesDiv = document.getElementById("entries");        
+    var entriesDiv = document.getElementById("todos");        
     // i) clear the list by settin innerHTML on the list empty
     entriesDiv.innerHTML = "";    
     // ii) (re-)add all entries
+
+    // get which category to display:
+    var showCategory = document.getElementById("show_category").value;
     for (var i = 0; i < todos.length; i++) {
-        var entryDiv = document.createElement("div");
-        entryDiv.innerHTML = "<div id=\"todo_" + i + "\" class=\"contact "+ todos[i].category + "\">" 
-                + todos[i].display(i) + "</div>";
-        entriesDiv.appendChild(entryDiv);
+        if (showCategory === "all" || todos[i].category === showCategory){
+            var entryDiv = document.createElement("div");
+            entryDiv.innerHTML = "<div id=\"todo_" + i + "\" class=\"todo "+ todos[i].category + "\">" 
+                                + todos[i].display(i) + "</div>";
+            entriesDiv.appendChild(entryDiv);
+        }
     }
 }
-

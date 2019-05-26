@@ -13,31 +13,28 @@
         <div id="wrapper">
             <div id="control">
                 <form action="">
-                    <!-- <input type="text" name="search" id="search" size="15" placeholder="Search" onkeyup="searchEntries()" />
-                    <i class="fa fa-sort-amount-desc"></i>
-                    <select name="sort" id="sort" onchange="sortContacts();displayEntries();">
-                        <option value="name">Name</option>
-                        <option value="tel">Telephone</option>
-                        <option value="email">Email</option>
-                    </select> -->
-                    <!-- <div id="buttons">
-                        <a href="#" onclick="show('addentry');"><i class="fa fa-plus fa-border"></i></a>
-                    </div> -->
+                    <label for="show_category">Display Category</label>
+                    <select name="show_category" id="show_category" onchange="displayEntries();">
+                        <option selected value="all">All</option>
+                        <option value="home" class="home">Home</option>
+                        <option value="work" class="work">Work</option>
+                        <option value="kids" class="kids">Kids</option>
+                        <option value="other">Other</option>
+                    </select>
                 </form>
             </div>
 
 			<!-- Add entry panel -->
             <div id="addentry" style="display:block;">
                 <h2>Add Todo</h2>
-                <!-- <div class="close"><a href="#" onclick="hide('addentry');"><i class="fa fa-remove"></i></a></div> -->
                 <form action="javascript:void(0);" onsubmit="addEntry();">
                     <label for="add_title">Title:</label>                        
                     <input type="text" name="add_title" id="add_title" />
                     <label for="add_category">Type:</label>
                     <select name="add_category" id="add_category">
-                        <option value="home">Home</option>
-                        <option value="work">Work</option>
-                        <option value="kids">Kids</option>
+                        <option value="home" class="home">Home</option>
+                        <option value="work" class="work">Work</option>
+                        <option value="kids" class="kids">Kids</option>
                         <option value="other">Other</option>
                     </select>
                     <label for="add_date">Date:</label>                        
@@ -51,7 +48,7 @@
             </div>
             
             <!-- Listing entries -->
-            <div id="entries"></div>
+            <div id="todos"></div>
         </div>
 
     </body>

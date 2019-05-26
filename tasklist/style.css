@@ -77,11 +77,11 @@ table {
     right: 5px;
 }
 
-#contacts {
+#todos {
     border: 5px solid #ececec;
 }
 
-.contact {
+.todo {
     border-width: 1px 1px 1px 5px;
     border-style: solid;
     border-color: #999999;
@@ -107,4 +107,19 @@ table {
     padding: 3px;
     right: 0;
     top: 0;
+}
+
+.home {
+    background-color: #fcfc99;
+    border-color: #ffff00;
+}
+
+.kids {
+    background-color:#eeadad;
+    border-color: #ff0000;
+}
+
+.work {
+    background-color:#b7e3fc;
+    border-color: #0000ff;
 }
