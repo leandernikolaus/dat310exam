@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #boxcontainer {
+            width: 400px;
+            background-color:yellow;
+        }
+        .box {
+            height:100px;
+            width: 100px;
+            background-color:green;
+            margin: 10px;
+        }
+        
+        /* Solution below */
+        #boxcontainer {
+            overflow: auto;
+        }
+        .box {
+            float: left;
+            position: relative;
+        }
+        #third {
+            clear: left;
+        }
+        .box div {
+            color: white;
+            position:absolute;
+            right: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div id="boxcontainer">
+        <div class="box" id="first">
+            <div>X</div>
+        </div>
+        <div class="box blue special" id="second">
+            <div>X</div>
+        </div>
+        <div class="box blue" id="third">
+            <div>X</div>
+        </div>
+        <div class="box" id="fourth" 
+             style="background-color: green;">
+             <div>X</div>
+        </div>
+    </div>
+</body>
+</html>
