@@ -93,22 +93,17 @@ table {
     font-size: 0.8em;
 }
 
-.contact_name {
+.todo_title {
     font-weight: bold;
 }
 
-.contact_details {
+.todo_date {
     font-size: 0.8em;    
 }
 
-.contact_details a, .contact_details a:visited {
-    color: blue;
-}
-
-.contact_operations {
-    width: 1.2em;
+.todo_category {
+    font-weight: bold;
     position: absolute;
-    text-align: center;
     padding: 3px;
     right: 0;
     top: 0;

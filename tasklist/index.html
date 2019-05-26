@@ -20,16 +20,16 @@
                         <option value="tel">Telephone</option>
                         <option value="email">Email</option>
                     </select> -->
-                    <div id="buttons">
+                    <!-- <div id="buttons">
                         <a href="#" onclick="show('addentry');"><i class="fa fa-plus fa-border"></i></a>
-                    </div>
+                    </div> -->
                 </form>
             </div>
 
 			<!-- Add entry panel -->
-            <div id="addentry" style="display:none;">
-                <h2>Add</h2>
-                <div class="close"><a href="#" onclick="hide('addentry');"><i class="fa fa-remove"></i></a></div>
+            <div id="addentry" style="display:block;">
+                <h2>Add Todo</h2>
+                <!-- <div class="close"><a href="#" onclick="hide('addentry');"><i class="fa fa-remove"></i></a></div> -->
                 <form action="javascript:void(0);" onsubmit="addEntry();">
                     <label for="add_title">Title:</label>                        
                     <input type="text" name="add_title" id="add_title" />
@@ -47,31 +47,6 @@
                     </textarea>
                     <label for="submit"></label>
                     <input type="submit" name="submit" value="Add" />
-                </form>
-            </div>
-
-			<!-- Modify entry panel -->
-            <div id="modentry" style="display:none;">
-                <h2>Modify entry</h2>
-                <div class="close"><a href="#" onclick="hide('modentry');"><i class="fa fa-remove"></i></a></div>
-                <form action="javascript:void(0);" onsubmit="saveChanges();">
-                        <label for="mod_title">Title:</label>                        
-                        <input type="text" name="mod_title" id="mod_title" />
-                        <label for="mod_category">Type:</label>
-                        <select name="mod_category" id="mod_category">
-                            <option value="home">Home</option>
-                            <option value="work">Work</option>
-                            <option value="kids">Kids</option>
-                            <option value="other">Other</option>
-                        </select>
-                        <label for="mod_date">Date:</label>                        
-                        <input type="date" name="mod_date" id="mod_date"/>
-                        <label for="mod_content">Todo:</label>
-                        <textarea type="text" name="mod_content" id="mod_content" rows="4">
-                        </textarea>
-                        <input type="hidden" name="mod_idx" id="mod_idx" value="" />
-                        <label for="submit"></label>
-                        <input type="submit" name="submit" value="Modify" />
                 </form>
             </div>
             
