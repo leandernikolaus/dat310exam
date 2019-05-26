@@ -15,8 +15,19 @@ function Entry(title, date, category, content) {
 function displayEntry(idx) {    
     var entry = "<div class=\"todo_title\">" + this.title + "</div>\n"
               + "<div class=\"todo_date\">" + this.date + "</div>\n"
-              + "<div class=\"todo_content\">" + this.content + "</div>\n"
+            //   + "<div class=\"todo_content\">" + this.content + "</div>\n"
               + "<div class=\"todo_category\">#" + this.category + "</div>\n";
+    if (this.content.length > 0){
+        var contentStart = "<div class=\"todo_content\">" + "<ul>";
+        var contentEnd = "</ul>" + "</div>\n";
+        var content = "";
+        for (var i=0; i< this.content.length; i++){
+            if (this.content[i].trim() !== ""){
+                content += "<li>" + this.content[i].trim() + "</li>"
+            }   
+        }
+        entry = entry + contentStart + content + contentEnd;
+    }
     return entry;
 }
 
@@ -57,6 +68,8 @@ function addEntry() {
     date = formatDate(date);
 
     var content = document.getElementById("add_content").value;
+    content = content.split(";");
+    
     var category = document.getElementById("add_category").value;
     
     if (!isInputError(title, date, content)) {
