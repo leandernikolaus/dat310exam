@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block content %}
+<main class="container">
+
+        <div class="framed">
+            <div class="prop_left col-sm-4">
+                <img src='{{ url_for("static", filename=phone["simage"]) }}' alt='Paper phone {{ phone["name"] }}' width="200px"/>
+    
+                <div class="price">{{ phone["price"] }}</div>
+            </div>
+            <div class="prop_right">
+                    <h3>{{ phone["name"] }}</h3>
+                
+                    <table class="table">
+                        <tr>
+                            <td>Size:</td>
+                            <td>{{ phone["size"] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Display:</td>
+                            <td>{{ phone["display"] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Price:</td>
+                            <td>{{ phone["price"] }},-</td>
+                        </tr>
+                    </table>
+            </div>
+            <div>
+                <form action='{{url_for("cart")}}' method="POST">
+                    <input type="hidden" name="id" value='{{ phone["id"] }}'>
+                    <input type="hidden" name="name" value='{{ phone["name"] }}'>
+                    <input type="hidden" name="action" value="do_1" />
+                    <input class="btn" type="submit" value="Add to shoping cart">
+                </form>
+            </div>
+        </div>
+    
+        <h1>Details</h1>
+    
+        <div class="framed">
+                {{ phone["summary"] }}
+        </div>
+    
+    </main>
+
+{% endblock %}

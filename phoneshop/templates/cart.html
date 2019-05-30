@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+{% block content %}
+<main class="container">
+    <script src='{{ url_for("static", filename="script-jQ.js") }}'></script>
+    <h3>Shopping Cart</h3>
+
+    {% with errors = get_flashed_messages(category_filter=["error"]) %}
+    {% if errors %}
+    <div class="alert alert-danger">
+      <a class="close" href="#">×</a>
+        {% for msg in errors %}
+            {{ msg }}
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
+    {% with messages = get_flashed_messages(category_filter=["success"]) %}
+    {% if messages %}
+    <div class="alert alert-success">
+      <a class="close" href="#">×</a>
+        {% for msg in messages %}
+            {{ msg }}
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Phone</th>
+                <th>Amout</th>
+                {% if step=="do_1" %}
+                <th>Add Remove</th>
+                {% endif %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for phone in phones %}
+                <tr id='row-{{ loop.index }}'>
+                    <td id='name-{{ loop.index }}'>{{ phone[0] }}</td>
+                    <td id='count-{{ loop.index }}'>{{ phone[1] }}</td>
+                    {% if step=="do_1" %}
+                    <td>
+                        <button for='{{ loop.index }}' class="btn add">+</button>
+                        <button for='{{ loop.index }}' class="btn rem">-</button>
+                    </td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% if phones and step == "do_1" %}
+        <form action='{{url_for("cart")}}' method="POST">
+            <input type="hidden" name="action" value="do_2" />
+            <input class="btn" type="submit" value="Checkout">
+        </form>
+    {% elif step=="do_2" %}
+        <form action='{{url_for("cart")}}' method="POST">
+            <input type="hidden" name="action" value="do_3" />
+            <input class="btn" type="submit" value="Confirm">
+        </form>    
+    {% endif %}
+</main>
+
+{% endblock %}
