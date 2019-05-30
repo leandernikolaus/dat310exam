@@ -5,7 +5,7 @@ function Entry(title, date, category, content) {
     this.title = title;
     this.date = date;
     this.category = category;
-    this.content = content;
+    this.content = content.split(";");;
     this.display = displayEntry;
 }
 
@@ -29,15 +29,6 @@ function displayEntry(idx) {
         entry = entry + contentStart + content + contentEnd;
     }
     return entry;
-}
-
-/*
- * Check if the entry contains a given search string in any of the fields
- */
-function contains(str) {
-    str = str.toLowerCase(); // case-insensitive matching
-    return (this.title.toLowerCase().indexOf(str) > -1) 
-            || (this.content.toLowerCase().indexOf(str) > -1);
 }
 
 /*
@@ -68,8 +59,7 @@ function addEntry() {
     date = formatDate(date);
 
     var content = document.getElementById("add_content").value;
-    content = content.split(";");
-    
+
     var category = document.getElementById("add_category").value;
     
     if (!isInputError(title, date, content)) {

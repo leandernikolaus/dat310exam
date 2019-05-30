@@ -16,9 +16,8 @@
                     <label for="show_category">Display Category</label>
                     <select name="show_category" id="show_category" onchange="displayEntries();">
                         <option selected value="all">All</option>
-                        <option value="home" class="home">Home</option>
-                        <option value="work" class="work">Work</option>
-                        <option value="kids" class="kids">Kids</option>
+                        <option value="home" >Home</option>
+                        <option value="work">Work</option>
                         <option value="other">Other</option>
                     </select>
                 </form>
@@ -30,11 +29,10 @@
                 <form action="javascript:void(0);" onsubmit="addEntry();">
                     <label for="add_title">Title:</label>                        
                     <input type="text" name="add_title" id="add_title" />
-                    <label for="add_category">Type:</label>
-                    <select name="add_category" id="add_category">
-                        <option value="home" class="home">Home</option>
-                        <option value="work" class="work">Work</option>
-                        <option value="kids" class="kids">Kids</option>
+                    <label for="add_category">Category:</label>
+                    <select name="add_category" id="add_category" onchange="changeClass(this.value);">
+                        <option value="home">Home</option>
+                        <option value="work">Work</option>
                         <option value="other">Other</option>
                     </select>
                     <label for="add_date">Date:</label>                        
