@@ -40,6 +40,7 @@
                 <tr id='row-{{ loop.index }}'>
                     <td id='name-{{ loop.index }}'>{{ phone[0] }}</td>
                     <td id='count-{{ loop.index }}'>{{ phone[1] }}</td>
+                    <input type="hidden" name="{{ phone[0] }}" value="{{ phone[1] }}" id="input-{{ loop.index }}" form="cartform" />
                     {% if step=="do_1" %}
                     <td>
                         <button for='{{ loop.index }}' class="btn add">+</button>
@@ -51,7 +52,7 @@
         </tbody>
     </table>
     {% if phones and step == "do_1" %}
-        <form action='{{url_for("cart")}}' method="POST">
+        <form action='{{url_for("cart")}}' method="POST" id="cartform">
             <input type="hidden" name="action" value="do_2" />
             <input class="btn" type="submit" value="Checkout">
         </form>

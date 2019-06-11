@@ -63,12 +63,3 @@ def isPhoneId(id):
             return True
     else:
         return False
-
-def addCount(counts):
-    ps = []
-    for p in phones:
-        if counts.get(p["id"], 0) > 0:
-            pn = copy.copy(p)
-            pn["count"] = counts[pn["id"]]
-            ps.append(pn)
-    return ps

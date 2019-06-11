@@ -1,0 +1,35 @@
+h4 {
+    border-width: 0px 0px 2px 1px;
+    border-color: blue;
+    padding:0;
+    margin: 2px;
+    border-style: solid;
+    background-color: yellow;
+}
+
+h4 {
+    border-width: 0px 0px 2px 1px;
+    border-color: blue;
+    padding:2px;
+    margin: 0;
+    border-style: solid;
+    background-color: yellow;
+}
+
+h4 {
+    border-width: 0px 2px 1px 0px;
+    border-color: blue;
+    padding:2px;
+    margin: 0;
+    border-style: solid;
+    background-color: yellow;
+}
+
+h4 {
+    border-width: 0px 2px 1px 0px;
+    border-color: blue;
+    padding:0;
+    margin: 2px;
+    border-style: solid;
+    background-color: yellow;
+}

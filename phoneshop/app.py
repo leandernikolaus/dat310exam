@@ -36,24 +36,23 @@ def cart():
 
         step = request.form.get("action", "do_1")
 
+        if step == "do_2":
+            print(request.form)
+            for name in getCart():
+                setCart(name, int(request.form.get(name,0)))
+        
         if cartCount() <= 0:
             step = "do_1"
-            flash('To checkout shoppping cart must contain at least one item.', 'error')
+            flash('To checkout shopping cart must contain at least one item.', 'error')
         elif cartCount() > 5:
             step = "do_1"
-            flash('Shoppping cart may contain at most 5 items.', 'error')
+            flash('Shopping cart may contain at most 5 items.', 'error')
         order = getCart().items()
         if step == "do_3":
             flash("Thanks for your order!", "success")
             emptyCart()
         return render_template("cart.html", phones=order, step=step)
     
-@app.route("/cart/<id>/<int:count>")
-def updateCart(id, count):
-    print("update", id, count)
-    setCart(id, count)
-    return "OK"
-
 def addToCart(id):
     if id != "":
         cart = session.get("cart", {})
@@ -61,11 +60,8 @@ def addToCart(id):
         session["cart"] = cart
 
 def setCart(id, count):
-    cart = session.get("cart", {})
-    if count > 0:  
-        cart[id] = count
-    elif id in cart:
-        del cart[id]
+    cart = session.get("cart", {}) 
+    cart[id] = count
     session["cart"] = cart
 
 def getCart():
