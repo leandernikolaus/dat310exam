@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta price="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My web shop</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/
+css/bootstrap.min.css">
+    <link rel="stylesheet" href='{{ url_for("static", filename="style.css") }}'>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <h1>My Paper Phone</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href='{{ url_for("index") }}'>Store</a></li>
+                <li><a href='{{ url_for("cart") }}'>Shoppingcart
+                    <!-- Add pill here to show number of itemt in cart -->
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    {% block content %}{% endblock %}
+    <footer>
+            <div class="contact">
+                <span class="strong">Credit to:</span> |
+                <a href="https://www.flickr.com/photos/76446879@N02/">Charlie</a>
+            </div>
+    </footer>
+        
+</body>
+</html>
+    

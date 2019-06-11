@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block content %}
+<main class="container">
+    
+    <h3>Shopping Cart</h3>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Phone</th>
+                <th>Amount</th>
+                <th>Add Remove</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            {% for phone in phones %}
+                <tr id='row-{{ loop.index }}'>
+                    <td id='name-{{ loop.index }}'>{{ phone[0] }}</td>
+                    <td id='count-{{ loop.index }}'>{{ phone[1] }}</td>
+                    <!-- Remove the buttons below on do_2 and do_3 -->
+                    <td>
+                        <button for='{{ loop.index }}' class="btn add">+</button>
+                        <button for='{{ loop.index }}' class="btn rem">-</button>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% if phones and step == "do_1" %}
+        <form action='{{url_for("cart")}}' method="POST">
+            <input type="hidden" name="action" value="do_2" />
+            <input class="btn" type="submit" value="Checkout">
+        </form>
+    {% elif step=="do_2" %}
+        <form action='{{url_for("cart")}}' method="POST">
+            <input type="hidden" name="action" value="do_3" />
+            <input class="btn" type="submit" value="Confirm">
+        </form>    
+    {% endif %}
+</main>
+
+{% endblock %}
