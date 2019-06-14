@@ -37,7 +37,7 @@
     * not empty     1p. empty entries are omitted
 
 ### PhoneShop:
-- Bootstrap
+- Bootstrap *Question: Should the use of bootstrap 4 classes give points? Currently I decided not to.*
     * columns      3p
     * jumbo-hidden 1p
 - Template
