@@ -1,15 +1,15 @@
 This repository contains the starter code and solution for the 2019 Exam in web programming (DAT310) at the University of Stavanger.
 
-The *files* folder contains the starting files.
-Folders *phoneshop*, *timer* and, *todolist* contain the solution for the respective exercises.
+Starting files are in [files](files).
+The remaining folders invlude solutions.
 Below is a description how to give points for different features in the exercises.
 
 # Points:
 ### Guess 20 points
 
-### CSS positioning 4 points
+### CSS positioning 4 points 
 
-### JQueryTimer 10 points
+### JQueryTimer 10 points [solution](timer)
 * stop      2p button showing correctly and working
 * restart   2p button showing correctly and working
 * cancel    1p button showing and displays form
@@ -17,7 +17,7 @@ Below is a description how to give points for different features in the exercise
 * titel     2p title is displayed
 * alert     1p title is alerted
 
-### Todolist  (total 24points)
+### Todolist  (total 24points) [solution](todolist)
 - Categories adding and formating 8 points
     * select        2p  correct html select element
     * label         1p  correct html label for select
@@ -42,7 +42,7 @@ Below is a description how to give points for different features in the exercise
     * trim          1p. whitespace is trimmed
     * not empty     1p. empty entries are omitted
 
-### PhoneShop:
+### PhoneShop [solution](phoneshop)
 - Bootstrap *Question: Should the use of bootstrap 4 classes give points? Currently I decided not to.*
     * columns      3p
     * jumbo-hidden 1p
