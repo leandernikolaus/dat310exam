@@ -7,7 +7,7 @@ Below is a description how to give points for different features in the exercise
 # Points:
 ### Guess 20 points
 
-### CSS positioning 4 points 
+### CSS positioning 4 points [solution](wip/css-position.html)
 
 ### JQueryTimer 10 points [solution](timer)
 * stop      2p button showing correctly and working
