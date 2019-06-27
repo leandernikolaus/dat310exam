@@ -1,3 +1,9 @@
+This repository contains the starter code and solution for the 2019 Exam in web programming (DAT310) at the University of Stavanger.
+
+The *files* folder contains the starting files.
+Folders *phoneshop*, *timer* and, *todolist* contain the solution for the respective exercises.
+Below is a description how to give points for different features in the exercises.
+
 # Points:
 ### Guess 20 points
 
