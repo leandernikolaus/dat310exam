@@ -1,4 +1,11 @@
+This repository contains the starter code and solution for the 2019 Exam in web programming (DAT310) at the University of Stavanger.
 
+The exercises are in [Assignment.pdf](Assignments.pdf)
+
+Starting files are in [files](files).
+
+Solutions are in [solution folder](solution).
+Below is a solution for exercises 8 and 9 and description how to give points for different features in the exercises.
 
 ##Part one
 
