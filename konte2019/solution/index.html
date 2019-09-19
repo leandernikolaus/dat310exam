@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+            function plusOne(number) {
+                return number + 1;
+            }
+            
+            function addOne(myfunc, number) {
+                return myfunc(number) + 1;
+            }
+            
+            var number = addOne(function(){
+                                    return plusOne(1);
+                                }, plusOne(0));
+            console.log(number);
+
+            
+
+    </script>
+    <style>
+
+        td {
+            border: 1px solid black;
+        }
+        tbody>td#this {
+            background-color: red;
+        }
+        tbody td.bar {
+            background-color: blue;
+        }
+        tbody, td.foo {
+            background-color: green;
+        }
+        tbody.thebody {
+            background-color: yellow;
+        }
+
+        p:first-line {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <style>
+        tbody>td#this {
+            background-color: red;
+        }
+        tbody td.bar {
+            background-color: blue;
+        }
+        tbody, td.foo {
+            background-color: green;
+        }
+        tbody.thebody {
+            background-color: yellow;
+        }
+    </style>
+    
+    <table>
+        <tbody class="thebody">
+            <tr>
+                <td colspan="2" class="foo bar" id="this">this</td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="thediv">The div</div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate ullam, natus laborum repudiandae libero corporis, officia voluptatum placeat necessitatibus deserunt labore veritatis cupiditate dolore qui. Sed quae velit tenetur necessitatibus!</p>
+</body>
+<script>
+    function foo(){
+        console.log("foo");
+    };
+    function bar(){
+        console.log("bar");
+    };
+
+
+    mydiv = document.getElementById("thediv");
+    mydiv.addEventListener("click",bar());
+    mydiv.addEventListener("click",foo());
+</script>
+</html>

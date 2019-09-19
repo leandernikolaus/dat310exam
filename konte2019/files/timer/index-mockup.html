@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Countdown timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside>
+        <form name="countdown_form" action="">
+            <input type="text" name="title" id="title">
+                <select name="minutes" id="minutes">
+                    <option value="0.1">6 seconds</option>
+                    <option value="1">1 minute</option>
+                    <option value="3">3 minutes</option>
+                    <option value="5">5 minutes</option>
+                    <option value="10">10 minutes</option>
+                    <option value="15">15 minutes</option>
+                </select>
+            <input type="submit" value="Go!">
+        </form>
+
+        <div class="smalltimer">
+            <span class="timeLeft">01:00</span>
+            <span>The title for this.</span>
+        </div>
+        <div class="smalltimer">
+            <span class="timeLeft">03:00</span>
+            <span>Another title.</span>
+        </div>
+
+</aside>
+<main>
+<div id="countdown" style="display: block;">
+    <div id="timer">03:00</div>
+    <progress id="progressbar" value="100" max="100"></progress>
+    <div id="showtitle">Another title</div>
+</div>
+</main>
+</body>
+</html>

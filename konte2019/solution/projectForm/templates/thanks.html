@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Thanks {{ form.get("name") }}</h1>
+            <p>Your project preferences are shown below.</p>
+        </div>
+    </header>
+    <main class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Preferred project</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ form.get("name") }}</td>
+                    <td>{{ form.get("project") }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    
+{% endblock %}
