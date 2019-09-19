@@ -1,4 +1,4 @@
-This repository contains the starter code and solution for the 2019 Exam in web programming (DAT310) at the University of Stavanger.
+This repository contains the starter code and solution for the 2019 retake exam in web programming (DAT310) at the University of Stavanger.
 
 The exercises are in [Assignment.pdf](Assignments.pdf)
 
