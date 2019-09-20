@@ -29,25 +29,29 @@ This is a guideline for point distribution in this exercise.
 Starter code is in folder `projectQuestion`.
 
 #### Part 1: form.html template
-    Jumbotron 1p
-    for loop for dropdown option 3p
-    labels html (for - id) 2p
-    form styling 4p
-    form uses post request 1p
-    form fields are submitted 2p
+   
+* Jumbotron 1p
+* for loop for dropdown option 3p
+* labels html (for - id) 2p
+* form styling 4p
+* form uses post request 1p
+* form fields are submitted 2p
 
 #### Part 2: app.py
+
 NewRoute
-    processing post 1p
-    inspect name 2p
-    redirect 2p
-    render template 1p
+
+* processing post 1p
+* inspect name 2p
+* redirect 2p
+* render template 1p
 
 #### Part 3: thanks.html template
+
 Thanks template
-    Table format 2p
-    Extends layout 1p
-    Display fields 2p
+* Table format 2p
+* Extends layout 1p
+* Display fields 2p
 
 ### 11 jQuery coding
 
@@ -56,15 +60,17 @@ Starter code is in folder `timer`.
 
 #### Styling in style.css
 Styling 
-    aside has right solid border 1p
-    aside has hight of complete page 2p
-    main centered 2p
+* aside has right solid border 1p
+* aside has hight of complete page 2p
+* main centered 2p
 
 #### JS Functions:
-NewTimeDisplay: 5p
-Working event listener in NewTimeDisplay 4p
-Update 6
-remove 4
+
+Points devided on the different functions, and the event listener in `script.js`
+* newTimeDisplay: 5p
+* Working event listener (click) in NewTimeDisplay 4p
+* updateTimeDisplay 6
+* removeDisplay 4
 
 ### 12 AJAX
 
@@ -75,25 +81,25 @@ Part one of the exercise is devided in `getentries()` in `data.js`
 and the functions to read the data from file in `app.py`.
 
 Get entries: (frontend and backend)
-Make and receive AJAX request  2
-encode and parse json (front and backend) 4
-entries come from session 2
-get entries is invoked on load 1
+* Make and receive AJAX request  2p
+* encode and parse json (front and backend) 4p
+* entries come from session 2p
+* getentries is invoked when page loads 1p
 
-Readfile:
-Open file 1
-Parse data 2
-add to session 1
-function is called 2
-Check session before calling function 2
+Readfile: (in backend `app.py`)
+* Open file 1
+* Parse data 2
+* add to session 1
+* function is called 2
+* Check session before calling function 2
 
-Set entries:
-Makes AJAX request 1
-Makes POST 1
-Sends the data 2
-JSON 2
-Add to session 1
-Invoke when data is updated on frontend 2
+Set entries: (frontend `data.js` and backend `app.py`)
+* Makes AJAX request 1p
+* Makes POST 1p
+* Sends the data 2p
+* JSON 2p
+* Add to session 1p
+* Invoke when data is updated on frontend 2p
 
 
 
