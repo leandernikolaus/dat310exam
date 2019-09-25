@@ -13,8 +13,8 @@ Below is a solution for exercises 8 and 9 and description how to give points for
 solution: 
 
 ```javascript
-mybutton.addEventListener("click", dothis);
-mybutton.addEventListener("click", dothat);
+mybutton.addEventListener("click", foo);
+mybutton.addEventListener("click", bar);
 ```
 ### 9 CSS Query
 ```
