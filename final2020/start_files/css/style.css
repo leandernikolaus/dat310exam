@@ -1,0 +1,30 @@
+/* Add your style declarations here.
+Specific requirements:
+ * The background of the entire page is #DDDED7.
+ * Headers are written with the font Montserrat, all other text uses the font Railway,
+    Both cases use sans-serif as backup font.
+      Fonts Montserrat and Raleway need to be imported:
+            'https://fonts.googleapis.com/css2?family=Montserrat'
+            'https://fonts.googleapis.com/css2?family=Raleway'
+
+ * Both headings have normal font weight, 0 margin and 0 padding (on all sides)
+ * Navigation menu is aligned on one line with the "logo" div. List items are aligned horizontally next to each other.
+    Hints:
+        change the display property of the navigation list items to inline
+        set the display property of the header to flex
+        ensure #logo and nav are positioned at the left and right end of the header
+        (you can also use float instead of a flexbox)
+ * Navigation menu items have:
+    10px padding on the top and bottom and 20px padding left and right,
+    background color #2D4D50 and text color #C6D8DA,
+    no underlining
+ * Main content:
+    Background is white
+    Padding is 20px
+    Top margin is 30px, other margins are 0px.
+ * Footer
+    Set 1px wide solid bottom border in #A1B7B9
+    Set bottom margin to 10px
+    Text is right aligned, font size set to 0.8em, colored #A1B7B9, and set to uppercase.
+
+*/

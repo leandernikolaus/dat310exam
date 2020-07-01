@@ -1,0 +1,37 @@
+* {
+    font-family: Verdana, Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    display: inline-block;
+    text-align: right;
+}
+
+table {
+    border-collapse: collapse;
+    margin:auto;
+}
+
+th {
+    background-color: #cccccc;
+    text-align: left;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 3px;    
+}
+
+.good {
+    background-color: #90ee90;
+}
+
+form {
+    text-align: left;
+    display: inline-block;
+    margin: auto;
+}

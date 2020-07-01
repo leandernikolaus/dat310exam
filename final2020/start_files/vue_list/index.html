@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue List</title>
+
+    <script src="vue.js"></script>
+    <script src="listentry.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <!-- The following <li> elements should be replaced by the listitem component. -->
+            <list-entry v-for="item in datalist">
+
+            </list-entry>
+        </ul>
+    </div>
+
+    <script>
+        let app = new Vue({
+            el: "#app",
+            data: {
+                datalist: ["First item", "Second item", "Third item"],
+                // when changing elements in the list above use this.$set() to make vue register something has changed.
+            }
+        })
+    </script>
+</body>
+
+</html>

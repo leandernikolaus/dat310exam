@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Recommended homepages</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for page in pages | sort(attribute="rating") | reverse %}
+        
+            <tr class="{{ 'good' if page.rating >= 4 }}">
+                <td>{{ loop.index }} </td>
+                <td><a href="/page/{{ page.index }}">{{ page.name }}</a> </td>
+                <td>{{ page.rating }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>Add page</h2>
+    <form action="/add" method="post">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name">
+    <br>
+    <label for="link">Link:</label>
+    <input type="text" name="link" id="link">
+    <br>
+    <label for="rating">Rating:</label>
+    <input type="number" name="rating" id="rating" min="0" max="5">
+    <br>
+    <label for="desc">About:</label>
+    <br>
+    <textarea name="desc" id="desc" cols="40" rows="5"></textarea>
+    <br>
+    <input type="submit" value="Add">
+    
+    </form>
+
+{% endblock %}

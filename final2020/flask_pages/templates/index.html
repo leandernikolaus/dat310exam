@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Recommended homepages</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+        
+            <tr class="good">
+                <td>1 </td>
+                <td><a href="/page/1">MDN web docs</a> </td>
+                <td>5</td>
+            </tr>
+        
+        
+            <tr class="good">
+                <td>2 </td>
+                <td><a href="/page/0">W3Schools</a> </td>
+                <td>4</td>
+            </tr>
+        
+        
+            <tr class="">
+                <td>3 </td>
+                <td><a href="/page/2">World wide web consortium</a> </td>
+                <td>2</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <h2>Add page</h2>
+    <form action="/add" method="post">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name">
+    <br>
+    <label for="link">Link:</label>
+    <input type="text" name="link" id="link">
+    <br>
+    <label for="rating">Rating:</label>
+    <input type="number" name="rating" id="rating" min="0" max="5">
+    <br>
+    <label for="desc">About:</label>
+    <br>
+    <textarea name="desc" id="desc" cols="40" rows="5"></textarea>
+    <br>
+    <input type="submit" value="Add">
+    
+    </form>
+
+{% endblock %}

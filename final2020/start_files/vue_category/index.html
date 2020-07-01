@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Categories</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="vue.js"></script>
+    <script src="data.js"></script>
+    
+</head>
+<body>
+    <div id="app">
+        <div class="box todo">
+            <h2>Todo</h2>
+            <ul>
+                <li v-for="item in todo" class="framed">{{ item.text }}  
+                    <!-- TODO: When item is flagged, the button below should include the class "flagged" -->
+                    <button v-on:click="flag(item)" 
+                        class="flag"    
+                    >Flag</button>
+                    <button v-on:click="setdone(item)">Done</button>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="box flagged">
+            <h2>Flagged</h2>
+            <ul>
+                <li v-for="item in flagged" class="framed">{{ item.text }}  
+                    <button v-on:click="flag(item)" 
+                        class="flag flagged"    
+                    >Flag</button>
+                    <button v-on:click="setdone(item)">Done</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        let app = new Vue({
+            el: "#app",
+            data: {
+                list: datalist,
+            },
+            methods: {
+                flag: function(item){
+                    console.log("flag");
+                    item.flagged = !item.flagged;
+                },
+                setdone: function(item){
+                    console.log("done");
+                    item.done = true;
+                }
+            },
+            computed: {
+                todo: function(){
+                    // TODO: Update this function to return all elements that are not done.
+                    return this.list;
+                },
+                flagged: function(){
+                    // TODO: Update this function to return all elements that are not done and flagged.
+                    return this.list;
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

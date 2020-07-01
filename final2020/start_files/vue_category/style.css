@@ -1,0 +1,65 @@
+#app {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    border: 2px solid #d3d3d3;
+    padding: 20px;
+    margin: 5px;
+    background-color: #e7e7e7;
+    width: 280px;
+}
+
+.todo {
+    background-color: rgb(181, 220, 250);
+    border-color: blue;
+}
+
+ul {
+    padding: 0;
+}
+
+h2 {
+    margin: 0;
+}
+
+.framed {
+    margin: 10px 5px;
+    padding: 10px;
+    border: 2px solid #d3d3d3;
+    overflow: auto;
+    background-color: #ffffff;
+    color: black;
+}
+
+li {
+    list-style: none;
+
+}
+
+button {
+    float: right;
+    border: 2px solid #e7e7e7;
+    padding: 2px 4px;
+    text-align: center;
+    text-decoration: none;
+    /* display: inline-block; */
+    font-size: 0.7em;
+    border-radius: 12px;
+    margin: 0 5px;
+}
+
+.flag {
+    border-color: #fa9e98;
+}
+
+.flagged {
+    border-color: #f44336;
+    background-color: #f44336;
+    color: #ffffff;
+}
+
+.hidden {
+    visibility: hidden;
+}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>{{ page.name }}</h1>
+
+    <p>
+        Link: <a href="{{ page.link }}">{{ page.link }}</a>
+    </p>
+
+    <p>
+        Rating: {{ page.rating }}
+    </p>
+
+    <p>
+        <h4>About:</h4>
+        {{ page.desc }}
+    </p>
+
+    <h2>Edit</h2>
+    <form action="/edit" method="post">
+    <input type="hidden" name="index" value="{{page.index}}">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" value="{{page.name}}">
+    <br>
+    <label for="link">Link:</label>
+    <input type="text" name="link" id="link" value="{{page.link}}">
+    <br>
+    <label for="rating">Rating:</label>
+    <input type="number" name="rating" id="rating" min="0" max="5" value="{{page.rating}}">
+    <br>
+    <label for="desc">About:</label>
+    <br>
+    <textarea name="desc" id="desc" cols="40" rows="5">{{ page.desc}}</textarea>
+    <br>
+    <input type="submit" value="Edit">
+    
+    </form>
+
+{% endblock %}

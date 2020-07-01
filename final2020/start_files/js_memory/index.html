@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory trainer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="box">
+        <h1>Test your Memory!</h1>
+    </div>
+
+    <form id="theForm" class="box" action="">
+        Remember
+        <input type="number" id="count" value="3" max="9" min="1">
+        <label for="count">numbers</label>
+        <button onclick="event.preventDefault();start();">Start</button>
+    </form>
+
+    <div class="box" id="numberbox">
+        <!-- Hint: Numbers should be shown as below: -->
+        <div class="number">3</div>
+        <div class="number">2</div>
+    </div>
+
+    <div class="box" id="padbox">
+        <p id="padinstruction">Type the numbers that were shown above:</p>
+        <div id="pad">
+            <button class="number" onclick="tipp(1);">1</button>
+            <button class="number" onclick="tipp(2);">2</button>
+            <button class="number" onclick="tipp(3);">3</button>
+            <button class="number" onclick="tipp(4);">4</button>
+            <button class="number" onclick="tipp(5);">5</button>
+            <button class="number" onclick="tipp(6);">6</button>
+            <button class="number" onclick="tipp(7);">7</button>
+            <button class="number" onclick="tipp(8);">8</button>
+            <button class="number" onclick="tipp(9);">9</button>
+        </div>
+    </div>
+
+</body>
+</html>

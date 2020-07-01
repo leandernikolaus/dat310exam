@@ -1,0 +1,11 @@
+#result.loading {
+    background-image: url("/static/saving.gif");
+}
+#result {
+    border: 2px solid black;
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 5px;
+    text-align: center;
+}

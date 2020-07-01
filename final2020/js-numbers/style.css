@@ -1,0 +1,52 @@
+* {
+    font-family: sans-serif;
+}
+
+#numbers {
+    width: 30px;
+}
+
+.box {
+    width: 300px;
+    margin: 20px auto;
+    background-color:#dddddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.number {
+    font-size: 3em;
+    font-weight: bold;
+    background-color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+
+#pad {
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+}
+#pad button {
+    width: 90px;
+    height: 90px;
+    background-color: #ffffff;
+    margin: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+
+}
+
+#numberbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.error {
+    color: red;
+}

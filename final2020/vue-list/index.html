@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue List</title>
+
+    <script src="vue.js"></script>
+    <script src="listentry.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <!-- The following <li> elements should be replaced by the listitem component. -->
+            <li v-for="item in list">
+                <span>{{ item }}</span> 
+            </li> 
+            <li>
+                <!-- This is an example for the html that you can use in the component -->
+                <span><input type="text"><button>Save</button><button>Cancel</button></span>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        let app = new Vue({
+            el: "#app",
+            data: {
+                list: ["First item", "Second item", "Third item"],
+                // when changing elements in the list above use this.$set() to make vue register something has changed.
+            }
+        })
+    </script>
+</body>
+
+</html>
